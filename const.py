@@ -1,0 +1,5 @@
+CLUBS = "clubs"
+DIAMONDS = "diamonds"
+HEARTS = "hearts"
+SPADES = "spades"
+NT = "no trump"

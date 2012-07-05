@@ -1,0 +1,39 @@
+import Deck
+import Player
+
+class Board(object):
+    def __init__(self, player1, player2, player3, player4, deck):
+        self.p1 = player1
+        self.p2 = player2
+        self.p3 = player3
+        self.p4 = player4
+        self.deck = deck
+        self.team1 = [self.p1, self.p3]
+        self.team2 = [self.p2, self.p4]
+
+    def deal(self):
+        shuffled_deck = self.deck.shuffle_and_return()
+        for i in range(0,len(shuffled_deck),4):
+            self.p1.hand[shuffled_deck[i][0]].append(shuffled_deck[i][1])
+            self.p2.hand[shuffled_deck[i+1][0]].append(shuffled_deck[i+1][1])
+            self.p3.hand[shuffled_deck[i+2][0]].append(shuffled_deck[i+2][1])
+            self.p4.hand[shuffled_deck[i+3][0]].append(shuffled_deck[i+3][1])
+
+
+
+def main():
+    player1 = Player.Player()
+    player2 = Player.Player()
+    player3 = Player.Player()
+    player4 = Player.Player()
+    deck = Deck.Deck()
+    board = Board(player1, player2, player3, player4, deck)
+    board.deal()
+    print board.p1.hand
+    print board.p2.hand
+    print board.p3.hand
+    print board.p4.hand
+    print board.p1.count_points()
+
+if __name__ == '__main__':
+    main()
