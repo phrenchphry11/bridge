@@ -36,7 +36,6 @@ class Player(object):
             self.hand_points += 1
 
         if len(self.hand["hearts"]) == 0:
-            print "len hearts"
             self.hand_points += 3
         elif len(self.hand["hearts"]) == 1:
             self.hand_points += 2
@@ -44,7 +43,6 @@ class Player(object):
             self.hand_points += 1
 
         if len(self.hand["spades"]) == 0:
-            print "len spades"
             self.hand_points += 3
         elif len(self.hand["spades"]) == 1:
             self.hand_points += 2
@@ -73,5 +71,3 @@ class Player(object):
                 return (1, "clubs")
         else:
             return None
-
-

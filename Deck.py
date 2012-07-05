@@ -21,5 +21,3 @@ class Deck(object):
                 shuffled_deck.append((suite,card))
         random.shuffle(shuffled_deck)
         return shuffled_deck
-
-

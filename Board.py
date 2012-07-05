@@ -19,8 +19,6 @@ class Board(object):
             self.p3.hand[shuffled_deck[i+2][0]].append(shuffled_deck[i+2][1])
             self.p4.hand[shuffled_deck[i+3][0]].append(shuffled_deck[i+3][1])
 
-
-
 def main():
     player1 = Player.Player()
     player2 = Player.Player()
@@ -29,11 +27,6 @@ def main():
     deck = Deck.Deck()
     board = Board(player1, player2, player3, player4, deck)
     board.deal()
-    print board.p1.hand
-    print board.p2.hand
-    print board.p3.hand
-    print board.p4.hand
-    print board.p1.count_points()
 
 if __name__ == '__main__':
     main()
