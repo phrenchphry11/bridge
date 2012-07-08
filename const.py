@@ -1,5 +1,5 @@
-CLUBS = "clubs"
-DIAMONDS = "diamonds"
-HEARTS = "hearts"
-SPADES = "spades"
-NT = "no trump"
+CLUBS = 0
+DIAMONDS = 1
+HEARTS = 2
+SPADES = 3
+NT = 4

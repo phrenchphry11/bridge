@@ -1,4 +1,7 @@
+#! /usr/bin/env python
+
 import random
+
 
 class Deck(object):
     def __init__(self):
